@@ -56,6 +56,7 @@ function ProjectRow({
   return (
     <Link
       href={`/projects/${project.slug}`}
+      prefetch={false}
       data-cursor="view"
       className="group block"
     >

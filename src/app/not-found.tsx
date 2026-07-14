@@ -14,6 +14,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
+          prefetch={false}
           className="group mt-10 inline-flex items-center gap-3 text-[12px] uppercase tracking-widest2 text-ink"
         >
           Về trang chủ

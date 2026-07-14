@@ -20,10 +20,18 @@ export default function Footer() {
             {studio.email}
           </a>
           <div className="flex gap-6">
-            <Link href="/#work" className="transition-colors hover:text-accent">
+            <Link
+              href="/#work"
+              prefetch={false}
+              className="transition-colors hover:text-accent"
+            >
               Công trình
             </Link>
-            <Link href="/#about" className="transition-colors hover:text-accent">
+            <Link
+              href="/#about"
+              prefetch={false}
+              className="transition-colors hover:text-accent"
+            >
               Giới thiệu
             </Link>
           </div>

@@ -46,6 +46,7 @@ export default function ProjectDetailPage({
         <Reveal>
           <Link
             href="/#work"
+            prefetch={false}
             className="group inline-flex items-center gap-2 text-[12px] uppercase tracking-widest2 text-concrete-400 transition-colors hover:text-ink"
           >
             <span className="inline-block h-px w-8 bg-concrete-300 transition-all duration-500 ease-out-cubic group-hover:w-4" />
@@ -116,6 +117,7 @@ export default function ProjectDetailPage({
       {/* Next project */}
       <Link
         href={`/projects/${next.slug}`}
+        prefetch={false}
         data-cursor="view"
         className="group block border-t border-concrete-200 bg-paper"
       >

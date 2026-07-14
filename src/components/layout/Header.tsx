@@ -35,6 +35,7 @@ export default function Header() {
       <div className="container-studio flex h-16 items-center justify-between md:h-20">
         <Link
           href="/"
+          prefetch={false}
           className="font-serif text-lg tracking-[0.18em] md:text-xl"
         >
           {studio.name}
@@ -45,6 +46,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
+              prefetch={false}
               className="group relative hidden text-[13px] tracking-wide text-concrete-500 transition-colors hover:text-ink sm:inline-block"
             >
               {l.label}
