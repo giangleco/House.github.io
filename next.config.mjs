@@ -13,12 +13,12 @@ const nextConfig = {
   // hoạt động đúng trên GitHub Pages.
   trailingSlash: true,
 
-  // Repo tên "House" → web phục vụ tại giangleco.github.io/House/
-  // basePath/assetPrefix phải TRÙNG tên repo (phân biệt hoa/thường).
-  // Nếu sau này đổi tên repo, sửa 2 dòng này cho khớp; nếu repo đổi thành
-  // <user>.github.io (chạy ở gốc "/") thì XOÁ 2 dòng này.
-  basePath: "/House",
-  assetPrefix: "/House/",
+  // Repo tên "House.github.io" → web phục vụ tại
+  // giangleco.github.io/House.github.io/  → basePath phải TRÙNG tên repo.
+  // (Nếu đổi tên repo thành đúng "giangleco.github.io" thì XOÁ 2 dòng này để
+  //  chạy ở gốc "/".)
+  basePath: "/House.github.io",
+  assetPrefix: "/House.github.io/",
 };
 
 export default nextConfig;
