@@ -22,7 +22,14 @@ import {
 
 const IMAGE_RE = /\.(jpe?g|png|webp|avif|gif)$/i;
 
-/** List image files inside public/<dir> as web paths (e.g. "/projects/x/01.jpg"). */
+/**
+ * ⚠ PHẢI KHỚP với `basePath` trong next.config.mjs.
+ * Khi export tĩnh + images.unoptimized, thẻ <img> KHÔNG tự thêm basePath, nên
+ * ta phải tự gắn vào đường dẫn ảnh ở đây. Deploy ở gốc "/" thì để "".
+ */
+const BASE_PATH = "/House.github.io";
+
+/** List image files inside public/<dir> as web paths (e.g. "/House.github.io/projects/x/01.jpg"). */
 export function readImages(dir: string): string[] {
   const abs = path.join(process.cwd(), "public", dir);
   try {
@@ -30,7 +37,7 @@ export function readImages(dir: string): string[] {
       .readdirSync(abs)
       .filter((f) => IMAGE_RE.test(f) && !f.startsWith("."))
       .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-      .map((f) => `/${dir}/${f}`);
+      .map((f) => `${BASE_PATH}/${dir}/${f}`);
   } catch {
     // Folder missing or empty → no images yet.
     return [];
